@@ -76,7 +76,7 @@ export const BacklightVertical = ({ ...props }) => {
 			/>
 			<rect
 				opacity='0.75'
-				x='150.639'
+				x='220.639'
 				y='758.41'
 				width='150.638'
 				height='150.638'

@@ -1,4 +1,5 @@
 import { PlayCircle, Trophy, Tunnel, Tv } from '@/assets/icons'
+import { useState, useEffect } from 'react'
 import Button from '@/components/ui/button'
 import Feature from './feature'
 import { BlueBox, GreenBox, PurpleCircle } from './badges'
@@ -41,6 +42,32 @@ const features = [
 ]
 
 export default function Header() {
+	const [background, setBackground] = useState(
+		'linear-gradient(-30deg, #fef3c7 50%, #fdf7f1 50%)'
+	)
+
+	useEffect(() => {
+		const mediaQuery = window.matchMedia('(min-width: 1024px)') // lg breakpoint in Tailwind
+		const updateBackground = e => {
+			if (e.matches) {
+				// Apply the gradient with a different degree for `lg`
+				setBackground('linear-gradient(-20deg, #fef3c7 50%, #fdf7f1 50%)')
+			} else {
+				// Default gradient for smaller screens
+				setBackground('linear-gradient(-40deg, #fef3c7 50%, #fdf7f1 50%)')
+			}
+		}
+
+		// Add listener to handle screen size changes
+		mediaQuery.addListener(updateBackground)
+
+		// Initial check
+		updateBackground(mediaQuery)
+
+		// Cleanup listener
+		return () => mediaQuery.removeListener(updateBackground)
+	}, [])
+
 	return (
 		<main className='relative font-sans overflow-hidden bg-beige'>
 			<div className='flex flex-col space-y-4 lg:space-x-10 py-6 px-2 justify-center items-center lg:flex-row lg:py-10 lg:px-10 z-10'>
@@ -81,10 +108,8 @@ export default function Header() {
 				))}
 			</div>
 			<div
-				className='absolute w-screen h-full z-0 bottom-44 lg:top-36 lg:bottom-0'
-				style={{
-					background: 'linear-gradient(-30deg, #fef3c7 50%, #fdf7f1 50%)',
-				}}
+				className='absolute w-screen h-[90%] lg:w-screen lg:h-full z-0 bottom-44 lg:top-36 lg:bottom-0 '
+				style={{ background }}
 			></div>
 		</main>
 	)

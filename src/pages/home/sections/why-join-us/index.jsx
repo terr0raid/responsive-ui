@@ -21,8 +21,8 @@ const items = [
 
 export default function WhyJoinUs() {
 	return (
-		<div className='relative bg-beige h-full w-full flex px-2 pt-2 pb-7 lg:px-10 lg:py-20 justify-center'>
-			<div className='bg-white rounded-[30px] shadow-card-dark-xl px-2 py-4 lg:p-10 w-full'>
+		<div className='relative h-full w-full flex px-2 pt-2 pb-7 lg:px-10 lg:py-20 justify-center'>
+			<div className='bg-white rounded-[30px] shadow-dark-xl px-2 py-4 lg:p-10 w-full'>
 				<div className='w-full flex flex-col lg:flex-row items-start justify-between gap-8 lg:items-center lg:justify-start'>
 					<div className='lg:w-1/2 z-10 space-y-3 flex flex-col items-center justify-center lg:items-start'>
 						<h2 className='text-heading-5 lg:text-heading-2 text-center'>
@@ -50,7 +50,7 @@ export default function WhyJoinUs() {
 					</div>
 				</div>
 			</div>
-			<VideoDecor className='absolute w-1/2 h-full right-5 top-0 z-0' />
+			<VideoDecor className='absolute w-full bottom-0 lg:w-1/2 h-full right-5 top-0 z-0 translate-x-[10%] translate-y-[20%] lg:translate-x-[0%] lg:translate-y-[0%]' />
 		</div>
 	)
 }

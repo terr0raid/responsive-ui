@@ -5,6 +5,7 @@ export default {
 		extend: {
 			colors: {
 				beige: '#FDF7F1',
+				default: '#FFFBEB',
 				amber: {
 					900: '#78350F',
 					400: '#FBBF24',
@@ -13,19 +14,21 @@ export default {
 				},
 				'blue-gray': '#0F172A',
 			},
-			backgroundColor: {
-				global: 'linear-gradient(180deg, #fffbeb 0%, #ffffff 89.63%)',
-			},
+
 			fontFamily: {
 				roboto: ['Roboto', 'sans-serif'],
 			},
 			boxShadow: {
-				'card-light-xxl':
+				'light-xxl':
 					'0 0 15px 0 rgba(255, 255, 255, 0.07), 0 25px 50px -12px rgba(255, 255, 255, 0.25)',
-				'card-dark-xxl':
+				'dark-xxl':
 					'0 0 15px 0 rgba(0, 0, 0, 0.07), 0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-				'card-dark-xl':
+				'dark-xl':
 					'0 0 10px 0 rgba(0, 0, 0, 0.07), 0 20px 25px -5px rgba(0, 0, 0, 0.1)',
+				'dark-l':
+					'0 0 6px 0 rgba(0, 0, 0, 0.07), 0 10px 15px -3px rgba(0, 0, 0, 0.10)',
+				'dark-s':
+					'0px 0px 2px 0px rgba(0, 0, 0, 0.07), 0px 1px 3px 0px rgba(0, 0, 0, 0.1)',
 			},
 			fontSize: {
 				'button-m': [
@@ -85,14 +88,14 @@ export default {
 					'56px',
 					{
 						lineHeight: '61.6px',
-						fontWeight: '500',
+						fontWeight: '800',
 					},
 				],
 				'heading-1': [
 					'72px',
 					{
 						lineHeight: '79.2px',
-						fontWeight: '700',
+						fontWeight: '900',
 					},
 				],
 				'subtitle-xl': [
@@ -123,6 +126,14 @@ export default {
 						fontWeight: '400',
 					},
 				],
+				'body-xxl': [
+					'24px',
+					{
+						lineHeight: '38.4px',
+						fontWeight: '400',
+					},
+				],
+
 				'body-m': [
 					'16px',
 					{
@@ -143,6 +154,11 @@ export default {
 				8: '64px',
 				9: '72px',
 				10: '80px',
+				11: '88px',
+				12: '96px',
+				13: '104px',
+				14: '112px',
+				15: '120px',
 				20: '160px',
 			},
 			borderRadius: {
